@@ -6,7 +6,6 @@ print("2. Acceleration (a)")
 print("3. Force (F)")
 missing_value_choice = input("Enter the option number for the missin value: ")
 # Prompt the user to enter the other two values
-a = 9.8
 if missing_value_choice == "1":
     a = float(input("Enter acceleration (a): "))
     F = float(input("Enter force (F): "))
