@@ -26,3 +26,12 @@ if remove_name in students_list:
     print("Student removed sucessfully!")
 else:
     print("Student not found!")
+
+# Remove a student
+remove_name = input("Enter the name of the student to remove or simply enter to skip: ")
+if remove_name in students_list:
+    del students_dict(remove_name)
+    students_list.remove(remove_name)
+    print("Student removed sucessfully!")
+else:
+    print("Student not found!")
