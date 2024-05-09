@@ -1,4 +1,4 @@
-Age = float(input("Enter your age:"))
+Age = int(input("Enter your age:"))
 print(Age)
 Student = input("Are you a student? (yes/no):")
 if Age <= 12:
