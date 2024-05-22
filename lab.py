@@ -17,3 +17,4 @@ class Person:
         print(f"{self.name} is sleeping.")
 
 class Teacher(Person):
+    de
