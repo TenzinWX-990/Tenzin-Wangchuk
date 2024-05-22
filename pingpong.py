@@ -79,31 +79,12 @@ class Game:
             game_over_rect.center = (WIDTH // 2, HEIGHT // 2)
             screen.blit(game_over_text, game_over_rect)
 
-def countdown(screen, font):
-    screen.fill(BLACK)
-    for i in range(3, 0, -1):
-        text = font.render(str(i), True, WHITE)
-        text_rect = text.get_rect()
-        text_rect.center = (WIDTH // 2, HEIGHT // 2)
-        screen.blit(text, text_rect)
-        pygame.display.flip()
-        time.sleep(1)
-    text = font.render("GO!", True, WHITE)
-    text_rect = text.get_rect()
-    text_rect.center = (WIDTH // 2, HEIGHT // 2)
-    screen.blit(text, text_rect)
-    pygame.display.flip()
-    time.sleep(1)
-
 def main():
     pygame.init()
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
     pygame.display.set_caption("Ping Pong")
     clock = pygame.time.Clock()
     game = Game()
-    font = pygame.font.Font(None, 36)
-
-    countdown(screen, font)
 
     while not game.game_over:
         game.handle_events()
@@ -122,3 +103,4 @@ def main():
 
     pygame.quit()
 main()
+
